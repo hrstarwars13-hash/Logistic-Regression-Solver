@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Regression Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Logistic Regression Solver</h1>
+    <div class="container">
+        <div class="box" id="input-box">
+            <h2>Data & Hyperparameters</h2>
+            <label>Learning Rate: <input type="number" id="learning-rate" value="0.1" step="0.01" min="0.001"></label><br>
+            <label>Epochs: <input type="number" id="epochs" value="100" min="1"></label><br>
+            <label>Output every k epochs: <input type="number" id="k-epochs" value="10" min="1"></label><br>
+            <label>Paste CSV (x[,x2],y):</label><br>
+            <textarea id="csv-input" rows="6" cols="40" placeholder="e.g. 1,0\n2,1\n..."></textarea><br>
+            <button id="run-btn">Run Gradient Descent</button>
+            <button id="clear-btn">Clear Data</button>
+        </div>
+        <div class="box" id="results-box">
+            <h2>Results</h2>
+            <textarea id="results" rows="10" cols="40" readonly placeholder="Results will appear here..."></textarea><br>
+            <button id="copy-btn">Copy</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
